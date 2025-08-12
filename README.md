@@ -7,9 +7,20 @@ learn new things and improve my electronics skills.
 
 # Purpose
 The purpose of this project was to control a DC motor using a MOSFET and microcontroller (MCU). The MCU
-interrupts power flow to the motor to control the number of revolutions. It does NOT control the speed of
+interrupts power flow to the motor to control the number of revolutions. It does notT control the speed of
 the motor. This project is applicable to, but not limited to, small pump controls, solenoid driving, 
-remote-controlled devices, and lighting control (can only control power flow, not lighting colours).
+remote-controlled devices, and DC motor control.
+
+# Implementation
+The MCU currently used is an ATtiny85. It works by staying in sleep mode until the trigger signal is detected, where it 
+wakes and proceeds to one of two scenarios:
+1. Start the motor, and count milliseconds until desired time is reached. This allows for precise revolution control.
+2. Start the motor, and keep rotating until trigger signal goes inactive. (Acts like a buffer)
+The MOSFET was not driven directly from the ATtiny85, as this could damage it. Instead, a MOSFET driver chip was used.
+This allows for a higher power MOSFET to be driven, from the same MCU. It was desired to keep the PCB size small, as the
+space restriction was tight. However, a bigger circuit board will allow for a more powerful MCU (STM32, ESP32, etc),
+higher power FETs, and higher continuous current flow.
+For a bill of materials, see the [hardware folder](/hardware). This folder also contains the schematics and layouts.
 
 # Electrical Characteristics
 - The controller works with batteries from 6V to 20V. Any voltage higher than 20V will damage the MOSFET.
