@@ -20,3 +20,4 @@ Any voltage lower than 6V will not power the MCU correctly.
 - Input signal wakes MCU on falling edge.
 - High power design allows PCB to withstand 15A of continuous current.
 - Able to withstand ~25A of peak current during motor startup.
+- Programmed through SPI.
