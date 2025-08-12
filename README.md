@@ -13,10 +13,10 @@ remote-controlled devices, and lighting control (can only control power flow, no
 
 # Electrical Characteristics
 - The controller works with batteries from 6V to 20V. Any voltage higher than 20V will damage the MOSFET.
-any voltage lower than 6V will not power the MCU correctly. 
+Any voltage lower than 6V will not power the MCU correctly. 
 - In low power mode, current draw is 300 uA.
 - Two wire input (one ground, one trigger) allows for stable triggering and external ground reference.
 - Input voltage should not exceed 5V. At least 4V is recommended for stability.
 - Input signal wakes MCU on falling edge.
-- High power considerations allows for 15A of continuous current through the PCB.
+- High power design allows PCB to withstand 15A of continuous current.
 - Able to withstand ~25A of peak current during motor startup.
