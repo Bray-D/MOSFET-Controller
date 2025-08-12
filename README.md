@@ -16,6 +16,7 @@ The MCU currently used is an ATtiny85. It works by staying in sleep mode until t
 wakes and proceeds to one of two scenarios:
 1. Start the motor, and count milliseconds until desired time is reached. This allows for precise revolution control.
 2. Start the motor, and keep rotating until trigger signal goes inactive. (Acts like a buffer)
+
 The MOSFET was not driven directly from the ATtiny85, as this could damage it. Instead, a MOSFET driver chip was used.
 This allows for a higher power MOSFET to be driven, from the same MCU. It was desired to keep the PCB size small, as the
 space restriction was tight. However, a bigger circuit board will allow for a more powerful MCU (STM32, ESP32, etc),
