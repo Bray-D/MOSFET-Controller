@@ -1,7 +1,7 @@
 # Bill of Materials
 
 |Designator|Value|Footprint|Quantity|
-|---|---|---|---|
+|-----|-----|-----|-----|
 |C1, C2|1μF|0603 (1608 Metric)|2|
 |C3, C4|100nF|0603 (1608 Metric)|2|
 |D1|STPS3150RL|DO201AD|1|
