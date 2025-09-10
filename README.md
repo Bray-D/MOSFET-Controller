@@ -7,7 +7,7 @@ learn new things and improve my electronics skills.
 
 # Purpose
 The purpose of this project was to control a DC motor using a MOSFET and microcontroller (MCU). The MCU
-interrupts power flow to the motor to control the number of revolutions. It does notT control the speed of
+interrupts power flow to the motor to control the number of revolutions. It does not control the speed of
 the motor. This project is applicable to, but not limited to, small pump controls, solenoid driving, 
 remote-controlled devices, and DC motor control.
 
@@ -28,8 +28,9 @@ For a bill of materials, see the [hardware folder](/hardware). This folder also 
 Any voltage lower than 6V will not power the MCU correctly. 
 - In low power mode, current draw is 300 uA.
 - Two wire input (one ground, one trigger) allows for stable triggering and external ground reference.
-- Input voltage should not exceed 5V. At least 4V is recommended for stability.
+- Wakeup voltage should not exceed 5V. At least 4V is recommended for stability.
 - Input signal wakes MCU on falling edge.
 - High power design allows PCB to withstand 15A of continuous current.
 - Able to withstand ~25A of peak current during motor startup.
 - Programmed through SPI.
+(Any in depth characteristics should be taken from the ATtiny85 datasheet.)
